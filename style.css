@@ -1,0 +1,41 @@
+html {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  background-color: springgreen;
+  padding: 0.2em 0.8em;
+  border-radius: 1em;
+  width: 2em;
+  height: 1em;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+input[type='radio']:checked {
+    display: inline-block;
+}
+
+.container label,
+.container input {
+    position: absolute;
+}
+
+.container label {
+    right: 0.5em;
+}
+
+.container.off label {
+    left: 0.5em;
+}
