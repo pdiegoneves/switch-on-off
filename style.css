@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html {
   font-family: 'Ubuntu', sans-serif;
 }
@@ -13,29 +18,69 @@ body {
 .container {
   position: relative;
   background-color: springgreen;
-  padding: 0.2em 0.8em;
+  padding: 0;
   border-radius: 1em;
-  width: 2em;
-  height: 1em;
+  width: 4em;
+  height: 2em;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.container::before {
+  content: '';
+  transition: all 0.5s ease-in-out;
 }
 
-input[type='radio'] {
-    display: none;
+.container.off {
+  background-color: tomato;
 }
 
-input[type='radio']:checked {
-    display: inline-block;
-}
-
-.container label,
+.container,
+.container div,
 .container input {
-    position: absolute;
+  position: absolute;
 }
 
-.container label {
-    right: 0.5em;
+.container.off::before {
+  font-size: 1.1em;
+  position: absolute;
+  content: 'F';
+  left: 4em;
 }
 
-.container.off label {
-    left: 0.5em;
+.container #seletor {
+  background-color: bisque;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2em;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  transition: all 0.5s ease-in-out;
+}
+
+.container #seletor::before {
+  position: absolute;
+  left: 2em;
+  content: 'N';
+  transition: all 0.5s ease-in-out;
+}
+
+.container.off #seletor::before {
+  position: absolute;
+  left: 2em;
+  content: 'F';
+  transition: all 0.5s ease-in-out;
+}
+
+.container.off #seletor {
+  left: 0.2em;
+}
+
+#seletor {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
 }
