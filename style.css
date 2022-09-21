@@ -31,6 +31,7 @@ body {
 .container::before {
   content: '';
   transition: all 0.5s ease-in-out;
+  font-size: 1.1em;
 }
 
 .container.off {
@@ -41,22 +42,21 @@ body {
 .container div,
 .container input {
   position: absolute;
+  font-size: 1.1em;
 }
 
 .container.off::before {
-  font-size: 1.1em;
   position: absolute;
   content: 'F';
   left: 4em;
 }
 
 .container #seletor {
-  background-color: bisque;
+  background-color: azure;
   top: 50%;
   transform: translateY(-50%);
   left: 2em;
   text-align: center;
-  font-size: 1.1em;
   line-height: 1.5em;
   transition: all 0.5s ease-in-out;
 }
